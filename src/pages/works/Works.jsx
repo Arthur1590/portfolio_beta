@@ -53,7 +53,7 @@ const Works = () => {
 							<article className='projects__card-title'>
 								<h5>{projectsList.title}</h5>
 								<p>{projectsList.desc} </p>
-								<Link to={`/react_portfolio/projects/${index}`}>
+								<Link to={`/portfolio_beta/projects/${index}`}>
 									<LinkTo title='~Learn More~>' />
 								</Link>
 							</article>

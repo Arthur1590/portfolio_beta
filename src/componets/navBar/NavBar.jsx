@@ -59,7 +59,7 @@ const NavBar = () => {
 				<nav className='header__nav'>
 					<ul className={classChangeList}>
 						<li className='header__nav-item'>
-							<NavLink to={'/react_portfolio/'} className='header__nav-link'>
+							<NavLink to={'/portfolio_beta/'} className='header__nav-link'>
 								home
 							</NavLink>
 						</li>

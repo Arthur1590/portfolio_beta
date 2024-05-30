@@ -31,10 +31,10 @@ function App() {
 				<Suspense fallback={<Skeleton />}>
 					<NavBar />
 					<Routes>
-						<Route path='/react_portfolio/' element={<LazyMain />} />
-						<Route path='/react_portfolio/works' element={<Works />} />
+						<Route path='/portfolio_beta/' element={<LazyMain />} />
+						<Route path='/portfolio_beta/works' element={<Works />} />
 						<Route
-							path='/react_portfolio/projects/:id'
+							path='/portfolio_beta/projects/:id'
 							element={<ProjectIndex />} // ! project details
 						/>
 					</Routes>

@@ -1,0 +1,33 @@
+@import "../../scss/main.scss";
+
+.section__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  color: $light-gray;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  width: 100%;
+  padding: 0 0.5rem;
+  margin: 7rem auto;
+  position: relative;
+
+  & span {
+    color: $primary;
+    font-weight: 400;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 100%;
+    min-height: 3px;
+    background: $primary;
+  }
+  .btn {
+    border: 1px dotted $primary;
+  }
+}

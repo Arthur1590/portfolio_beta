@@ -1,0 +1,68 @@
+@import "../../../scss/main.scss";
+
+.about {
+  .section__title {
+    button {
+      display: none;
+    }
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__content {
+    max-width: 40rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    h5 {
+      font-weight: 500;
+      color: $light-gray;
+      font-size: clamp(1rem, 2.5vw, 3.5rem);
+    }
+    p {
+      color: $dark-gray;
+      font-weight: 400;
+      font-size: clamp(1rem, 1.5vw, 2rem);
+    }
+    .btn {
+      margin-top: 2rem;
+      font-size: clamp(1rem, 2vw, 2rem);
+    }
+  }
+  &__bio {
+    position: relative;
+    overflow: hidden;
+    width: 40%;
+    backdrop-filter: blur(7.5px);
+
+    img:nth-child(1) {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      border: 0.2rem solid $primary;
+      background: #672dbd0b;
+    }
+    img:nth-child(2) {
+      position: absolute;
+      top: 0rem;
+      left: calc(100% / 5);
+      rotate: 90deg;
+      width: 60%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    img:nth-child(3) {
+      position: absolute;
+      right: 4.5rem;
+      width: 40%;
+      object-fit: cover;
+      bottom: 0.5rem;
+      rotate: 90deg;
+      z-index: 1;
+    }
+  }
+}

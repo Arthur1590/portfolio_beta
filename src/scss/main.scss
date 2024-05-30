@@ -1,0 +1,102 @@
+@import "./fonts.scss";
+@import "./reset.scss";
+@import "./media.scss";
+
+// * colors
+$primary: #c778dd;
+$background: #282c33;
+$light-gray: #fcfcfd;
+$dark-gray: #abb2bf;
+$white: #fff;
+$opacity-grey: #98a2b3;
+
+html {
+  background: $background;
+  scroll-behavior: smooth;
+}
+#root {
+  overflow: hidden;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  font-family: "FiraCode";
+
+  &__decor {
+    &-top {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      z-index: -1;
+      top: 0;
+      right: 0;
+    }
+    &-bottom {
+      rotate: -180deg;
+      position: absolute;
+      object-fit: cover;
+      width: 50%;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.container {
+  max-width: 76.5rem;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+::selection {
+  background: $primary;
+  color: $light-gray;
+}
+.main {
+  margin: 0.5rem 0;
+  & section {
+    margin: 10rem 0;
+  }
+  & #about,
+  #projects,
+  #skills,
+  #contacts {
+    scroll-margin: 120px;
+  }
+}
+.menu {
+  display: none;
+}
+
+// * main => section => intro
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// * footer => section => socials
+@keyframes topdown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+    z-index: 1;
+  }
+}

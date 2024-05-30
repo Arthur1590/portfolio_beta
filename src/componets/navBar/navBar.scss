@@ -1,0 +1,66 @@
+@import "../../scss/main.scss";
+
+.header {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background: $background;
+  .fluid__container {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 5rem;
+    padding: 1.5rem 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid $light-gray;
+  }
+
+  &__logo {
+    img {
+      object-fit: contain;
+    }
+    p {
+      font-weight: 400;
+      font-size: clamp(1rem, 1.5vw, 3rem);
+      color: $light-gray;
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+    }
+  }
+  &__nav {
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    &-link {
+      font-weight: 400;
+      font-size: clamp(1rem, 1.5vw, 3rem);
+      color: $light-gray;
+      position: relative;
+      display: block;
+      max-width: 10rem;
+      width: 100%;
+      &:before {
+        content: "#";
+        font-weight: 400;
+        color: $primary;
+        transition: 0.3s all;
+        position: absolute;
+        left: calc(-100px / 4);
+        bottom: 0;
+        opacity: 0;
+      }
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,217 @@
+$primary: #c778dd;
+$light-gray: #fcfcfd;
+$dark-gray: #abb2bf;
+
+@media screen and (max-width: 768px) {
+  .header {
+    & .container {
+      backdrop-filter: none;
+    }
+    .menu {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      width: 30px;
+      height: 20px;
+      & span {
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%) scale(1);
+        display: block;
+        background: #fff;
+        transition: 0.3s;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        left: 0;
+        display: block;
+        transition: 0.3s;
+      }
+      &::after {
+        top: 0;
+      }
+      &::before {
+        bottom: 0;
+      }
+      &.active span {
+        scale: 0;
+        opacity: 0;
+      }
+      &.active::after {
+        transform: rotate(45deg);
+        top: 9px;
+      }
+      &.active::before {
+        transform: rotate(-45deg);
+        bottom: 9px;
+      }
+    }
+    &__nav {
+      &-list {
+        position: fixed;
+        top: 5.5rem;
+        right: 3.5rem;
+        padding: 1.5rem 2.5rem;
+        background: #c778dd2d;
+        backdrop-filter: blur(1rem);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-items: center;
+        border-right: 1px solid #c778dd;
+        border-left: 1px solid #c778dd;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transform: translateY(-150%);
+        transition: 0.3s all;
+
+        &.active {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+  .main {
+    & .section__title {
+      h1 {
+        font-size: 1rem;
+        span {
+          font-size: 1rem;
+        }
+      }
+      .btn {
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+    }
+    & .intro {
+      &__status {
+        h5 {
+          font-size: clamp(0.7rem, 1.5vw, 1.5rem);
+          span {
+            font-size: clamp(0.7rem, 1.5vw, 1.5rem);
+          }
+        }
+      }
+    }
+  }
+  .App {
+    .project__index {
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 578px) {
+  .main {
+    & .intro {
+      & .container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+      }
+      &__content {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+    }
+    & .about {
+      .container {
+        flex-direction: column-reverse;
+        gap: 2rem;
+      }
+      &__content {
+        align-items: center;
+        p {
+          text-align: center;
+        }
+      }
+    }
+    & .works {
+      .container {
+        display: flex;
+        flex-direction: column;
+        flex-flow: row wrap;
+        align-items: stretch;
+      }
+    }
+  }
+  .footer {
+    & .info {
+      .container {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      &__socials {
+        align-items: center;
+      }
+    }
+  }
+  .App {
+    & .projects {
+      .container {
+        display: flex;
+        flex-flow: column wrap;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 428px) {
+  .main {
+    & .contacts {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+      &__content {
+        text-align: left;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .App {
+    .projects {
+      .container {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+      }
+    }
+  }
+  .main {
+    .works {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .App {
+    .container {
+      max-width: 90%;
+    }
+    .footer {
+      & .info__socials-icons {
+        & img {
+          width: 5rem;
+          height: 5rem;
+        }
+      }
+    }
+  }
+}

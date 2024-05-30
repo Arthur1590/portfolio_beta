@@ -1,0 +1,43 @@
+@import "../../scss/main.scss";
+
+.App {
+  & .loader {
+    margin-top: 3rem;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: 70%;
+      object-fit: cover;
+      object-position: center;
+      animation: spin infinite 5s linear;
+      z-index: -1;
+    }
+    h1 {
+      color: $dark-gray;
+      font-size: clamp(1rem, 2.5vw, 2.5rem);
+      border-radius: 20px;
+      font-weight: 500;
+      backdrop-filter: blur(0.5rem);
+      padding: 0.5rem 1rem;
+      background: #b0b0b051;
+    }
+  }
+}
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}

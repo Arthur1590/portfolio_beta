@@ -1,0 +1,31 @@
+* button,
+input {
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+*::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:is(a, li, ul) {
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

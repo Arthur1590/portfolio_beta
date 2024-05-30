@@ -1,0 +1,15 @@
+@import "../../scss/main.scss";
+
+.btn {
+  display: flex;
+  align-items: center;
+  border: 1px solid $primary;
+  outline: none;
+  background: none;
+  padding: 0.5rem 1.5rem;
+  transition: 0.5s all;
+  &:hover {
+    backdrop-filter: blur(0.5rem);
+    background: #5252524e;
+  }
+}

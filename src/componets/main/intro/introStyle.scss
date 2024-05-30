@@ -1,0 +1,148 @@
+@import "../../../scss/main.scss";
+
+.intro {
+  display: flex;
+  align-items: center;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__content {
+    max-width: 50%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    gap: 2rem;
+    h5 {
+      color: $light-gray;
+      font-weight: 500;
+      font-size: clamp(1rem, 2.5vw, 2.5rem);
+      span {
+        color: $primary;
+      }
+    }
+    p {
+      color: $dark-gray;
+      font-weight: 400;
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+    }
+    .btn {
+      color: $light-gray;
+      font-family: "FiraCode";
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+    }
+  }
+
+  &__bio {
+    width: 100%;
+    position: relative;
+    .intro__decor-left {
+      z-index: -1;
+      position: absolute;
+      left: 4.5rem;
+      top: 0;
+      width: 25%;
+      rotate: 90deg;
+      object-fit: cover;
+    }
+    .intro__decor-right {
+      z-index: 1;
+      position: absolute;
+      right: 4.5rem;
+      bottom: 4rem;
+      width: 25%;
+      rotate: 90deg;
+      object-fit: cover;
+    }
+    img:nth-of-type(1) {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-top: 0.4rem dashed $light-gray;
+      border-left: 0.4rem dashed $light-gray;
+      border-right: 0.4rem dashed $light-gray;
+    }
+  }
+  &__status {
+    border: 1px solid $light-gray;
+    position: absolute;
+    width: 100%;
+    min-height: fit-content;
+    bottom: 0;
+    padding: 0.4rem 0;
+    backdrop-filter: blur(7.5px);
+    background: #00000071;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    &-box {
+      max-width: 15px;
+      width: 100%;
+      min-height: 15px;
+      background: $primary;
+      animation: blink 1005ms infinite linear;
+    }
+    h5 {
+      color: $light-gray;
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+      font-weight: 400;
+      span {
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+        color: $primary;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.citate {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  &__holder {
+    border: 1px solid $light-gray;
+    padding: 0 1.4rem;
+    width: fit-content;
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    & .citate__quite:nth-child(1) {
+      position: absolute;
+      top: -1rem;
+      left: 1rem;
+      background: $background;
+      object-fit: contain;
+    }
+    & .citate__quite:nth-child(2) {
+      position: absolute;
+      top: -1rem;
+      right: 0.5rem;
+      background: $background;
+      object-fit: contain;
+    }
+    &:nth-child(2) {
+      p {
+        color: $primary;
+      }
+    }
+    p {
+      color: $light-gray;
+      font-weight: 400;
+      font-size: clamp(1rem, 2.2vw, 3rem);
+    }
+  }
+}
